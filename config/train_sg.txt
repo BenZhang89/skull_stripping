@@ -30,4 +30,4 @@ start_iteration    = 0
 test_iteration     = 10
 test_step          = 2
 model_pre_trained  = 
-model_save_prefix  = model17/msnet_sg
+model_save_prefix  = model/msnet_sg
