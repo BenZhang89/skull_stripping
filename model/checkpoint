@@ -1,3 +1,4 @@
-model_checkpoint_path: "msnet_ax_1000.ckpt"
+model_checkpoint_path: "msnet_ax_1500.ckpt"
 all_model_checkpoint_paths: "msnet_ax_500.ckpt"
 all_model_checkpoint_paths: "msnet_ax_1000.ckpt"
+all_model_checkpoint_paths: "msnet_ax_1500.ckpt"
