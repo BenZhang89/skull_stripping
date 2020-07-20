@@ -192,9 +192,9 @@ def test(config_file):
     sess.close()
       
 if __name__ == '__main__':
-    if(len(sys.argv) != 3):
+    if(len(sys.argv) != 2):
         print('Number of arguments should be 2,i.e config file path and data path, e.g.')
-        print('python test.py config/test_all_class.txt /gpfs/scratch/bz957/skull_stripping')
+        print('python test.py config/test_all_class.txt')
         exit()
     config_file = str(sys.argv[1])
     assert (os.path.isfile(config_file))
