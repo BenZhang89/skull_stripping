@@ -1,10 +1,5 @@
-**/skynet_scripts
 **/dataset
 **/model
 **/result
-<<<<<<< HEAD
-**/model
-=======
 skynet_scripts/*.log
 
->>>>>>> 2f74edef3a1a5f2cb2c44f135d4d7edbc5c5626e
