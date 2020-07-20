@@ -1,3 +1,5 @@
 **/dataset
+**/model
 **/result
-*.log
+skynet_scripts/*.log
+
