@@ -1,0 +1,100 @@
+data data_root /gpfs/scratch/bz957/skull_stripping /gpfs/scratch/bz957/skull_stripping
+data data_names config/train_names.txt config/train_names.txt
+data modality_postfix [t1_mprage] ['t1_mprage']
+data label_postfix brain brain
+data file_postfix nii.gz nii.gz
+data with_ground_truth True True
+data batch_size 5 5
+data data_shape [19, 144, 144, 1] [19, 144, 144, 1]
+data label_shape [11, 144, 144, 1] [11, 144, 144, 1]
+data label_convert_source [0, 1] [0, 1]
+data label_convert_target [0, 1] [0, 1]
+data batch_slice_direction axial axial
+data train_with_roi_patch False False
+data label_roi_mask  None
+data roi_patch_margin  None
+network net_type MSNet MSNet
+network net_name MSNet_ax MSNet_ax
+network downsample_twice True True
+network class_num 2 2
+training learning_rate 1e-3 0.001
+training decay 1e-7 1e-07
+training maximal_iteration 2000 2000
+training snapshot_iteration 500 500
+training start_iteration 0 0
+training test_iteration 10 10
+training test_step 1 1
+training model_pre_trained  None
+training model_save_prefix model/msnet_ax model/msnet_ax
+size of predicty: Tensor("MSNet_ax/final_pred/conv:0", shape=(5, 11, 144, 144, 2), dtype=float32)
+2020-07-20 14:21:15.232210: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 0 with properties: 
+name: Tesla V100-SXM2-32GB
+major: 7 minor: 0 memoryClockRate (GHz) 1.53
+pciBusID 0035:04:00.0
+Total memory: 31.72GiB
+Free memory: 31.41GiB
+2020-07-20 14:21:15.248322: I tensorflow/core/common_runtime/gpu/gpu_device.cc:961] DMA: 0 
+2020-07-20 14:21:15.248345: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   Y 
+2020-07-20 14:21:15.248366: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0035:04:00.0)
+Loading patient ds000102/sub-13 and modality t1_mprage
+Traceback (most recent call last):
+  File "train.py", line 125, in <module>
+    train(config_file)
+  File "train.py", line 84, in train
+    dataloader.load_data()
+  File "/gpfs/scratch/bz957/skull_stripping/util/data_loader.py", line 112, in load_data
+    volume, volume_name = self.__load_one_volume(self.patient_names[i], self.modality_postfix[mod_idx])
+  File "/gpfs/scratch/bz957/skull_stripping/util/data_loader.py", line 66, in __load_one_volume
+    image_names = os.listdir(patient_dir)
+FileNotFoundError: [Errno 2] No such file or directory: '/gpfs/scratch/bz957/skull_stripping/ds000102/sub-13'
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@skygpu20>
+Subject: Job 108122: <#!/bin/bash;#BSUB -n 1;#BSUB -gpu "num=1:mode=shared:j_exclusive=yes";#BSUB -R "rusage[mem=2]";#BSUB -q gpu32;#BSUB -o /gpfs/scratch/bz957/skull_stripping/skynet_scripts/train_%J.log;  . /gpfs/share/skynet/apps/anaconda3/etc/profile.d/conda.sh;conda activate /gpfs/scratch/bz957/brats_skynet;###conda activate powerai1.6_env;cd /gpfs/scratch/bz957/skull_stripping; python -u train.py config/train_ax.txt> in cluster <SkynetCluster> Exited
+
+Job <#!/bin/bash;#BSUB -n 1;#BSUB -gpu "num=1:mode=shared:j_exclusive=yes";#BSUB -R "rusage[mem=2]";#BSUB -q gpu32;#BSUB -o /gpfs/scratch/bz957/skull_stripping/skynet_scripts/train_%J.log;  . /gpfs/share/skynet/apps/anaconda3/etc/profile.d/conda.sh;conda activate /gpfs/scratch/bz957/brats_skynet;###conda activate powerai1.6_env;cd /gpfs/scratch/bz957/skull_stripping; python -u train.py config/train_ax.txt> was submitted from host <skynet01> by user <bz957> in cluster <SkynetCluster> at Mon Jul 20 14:20:52 2020
+Job was executed on host(s) <skygpu20>, in queue <gpu32>, as user <bz957> in cluster <SkynetCluster> at Mon Jul 20 14:20:52 2020
+</home/bz957> was used as the home directory.
+</gpfs/scratch/bz957/skull_stripping/skynet_scripts> was used as the working directory.
+Started at Mon Jul 20 14:20:52 2020
+Terminated at Mon Jul 20 14:23:17 2020
+Results reported at Mon Jul 20 14:23:17 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -n 1
+#BSUB -gpu "num=1:mode=shared:j_exclusive=yes"
+#BSUB -R "rusage[mem=2]"
+#BSUB -q gpu32
+#BSUB -o /gpfs/scratch/bz957/skull_stripping/skynet_scripts/train_%J.log
+
+
+. /gpfs/share/skynet/apps/anaconda3/etc/profile.d/conda.sh
+conda activate /gpfs/scratch/bz957/brats_skynet
+###conda activate powerai1.6_env
+cd /gpfs/scratch/bz957/skull_stripping
+
+python -u train.py config/train_ax.txt
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   129.33 sec.
+    Max Memory :                                 1 GB
+    Average Memory :                             0.83 GB
+    Total Requested Memory :                     2.00 GB
+    Delta Memory :                               1.00 GB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                12
+    Run time :                                   145 sec.
+    Turnaround time :                            145 sec.
+
+The output (if any) is above this job summary.
+

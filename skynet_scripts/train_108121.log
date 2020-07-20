@@ -1,0 +1,55 @@
+Traceback (most recent call last):
+  File "train.py", line 124, in <module>
+    assert(os.path.isfile(config_file))
+AssertionError
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@skygpu20>
+Subject: Job 108121: <#!/bin/bash;#BSUB -n 1;#BSUB -gpu "num=1:mode=shared:j_exclusive=yes";#BSUB -R "rusage[mem=2]";#BSUB -q gpu32;#BSUB -o /gpfs/scratch/bz957/skull_stripping/skynet_scripts/train_%J.log;  . /gpfs/share/skynet/apps/anaconda3/etc/profile.d/conda.sh;conda activate /gpfs/scratch/bz957/brats_skynet;###conda activate powerai1.6_env;cd /gpfs/scratch/bz957/skull_stripping; python -u train.py config19/train_ax.txt> in cluster <SkynetCluster> Exited
+
+Job <#!/bin/bash;#BSUB -n 1;#BSUB -gpu "num=1:mode=shared:j_exclusive=yes";#BSUB -R "rusage[mem=2]";#BSUB -q gpu32;#BSUB -o /gpfs/scratch/bz957/skull_stripping/skynet_scripts/train_%J.log;  . /gpfs/share/skynet/apps/anaconda3/etc/profile.d/conda.sh;conda activate /gpfs/scratch/bz957/brats_skynet;###conda activate powerai1.6_env;cd /gpfs/scratch/bz957/skull_stripping; python -u train.py config19/train_ax.txt> was submitted from host <skynet01> by user <bz957> in cluster <SkynetCluster> at Mon Jul 20 14:19:11 2020
+Job was executed on host(s) <skygpu20>, in queue <gpu32>, as user <bz957> in cluster <SkynetCluster> at Mon Jul 20 14:19:11 2020
+</home/bz957> was used as the home directory.
+</gpfs/scratch/bz957/skull_stripping/skynet_scripts> was used as the working directory.
+Started at Mon Jul 20 14:19:11 2020
+Terminated at Mon Jul 20 14:19:29 2020
+Results reported at Mon Jul 20 14:19:29 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -n 1
+#BSUB -gpu "num=1:mode=shared:j_exclusive=yes"
+#BSUB -R "rusage[mem=2]"
+#BSUB -q gpu32
+#BSUB -o /gpfs/scratch/bz957/skull_stripping/skynet_scripts/train_%J.log
+
+
+. /gpfs/share/skynet/apps/anaconda3/etc/profile.d/conda.sh
+conda activate /gpfs/scratch/bz957/brats_skynet
+###conda activate powerai1.6_env
+cd /gpfs/scratch/bz957/skull_stripping
+
+python -u train.py config19/train_ax.txt
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   7.20 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     2.00 GB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   18 sec.
+    Turnaround time :                            18 sec.
+
+The output (if any) is above this job summary.
+

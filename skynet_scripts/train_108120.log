@@ -1,0 +1,59 @@
+Traceback (most recent call last):
+  File "train.py", line 15, in <module>
+    from scipy import ndimage
+  File "/home/bz957/.local/lib/python3.6/site-packages/scipy/__init__.py", line 148, in <module>
+    from scipy._lib._ccallback import LowLevelCallable
+  File "/home/bz957/.local/lib/python3.6/site-packages/scipy/_lib/_ccallback.py", line 1, in <module>
+    from . import _ccallback_c
+ImportError: cannot import name '_ccallback_c'
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@skygpu20>
+Subject: Job 108120: <#!/bin/bash;#BSUB -n 1;#BSUB -gpu "num=1:mode=shared:j_exclusive=yes";#BSUB -R "rusage[mem=2]";#BSUB -q gpu32;#BSUB -o /gpfs/scratch/bz957/skull_stripping/skynet_scripts/train_%J.log;  . /gpfs/share/skynet/apps/anaconda3/etc/profile.d/conda.sh;conda activate /gpfs/scratch/bz957/brats_skynet;###conda activate powerai1.6_env;cd /gpfs/scratch/bz957/skull_stripping; python -u train.py config19/train_ax.txt> in cluster <SkynetCluster> Exited
+
+Job <#!/bin/bash;#BSUB -n 1;#BSUB -gpu "num=1:mode=shared:j_exclusive=yes";#BSUB -R "rusage[mem=2]";#BSUB -q gpu32;#BSUB -o /gpfs/scratch/bz957/skull_stripping/skynet_scripts/train_%J.log;  . /gpfs/share/skynet/apps/anaconda3/etc/profile.d/conda.sh;conda activate /gpfs/scratch/bz957/brats_skynet;###conda activate powerai1.6_env;cd /gpfs/scratch/bz957/skull_stripping; python -u train.py config19/train_ax.txt> was submitted from host <skynet01> by user <bz957> in cluster <SkynetCluster> at Mon Jul 20 14:14:34 2020
+Job was executed on host(s) <skygpu20>, in queue <gpu32>, as user <bz957> in cluster <SkynetCluster> at Mon Jul 20 14:14:35 2020
+</home/bz957> was used as the home directory.
+</gpfs/scratch/bz957/skull_stripping/skynet_scripts> was used as the working directory.
+Started at Mon Jul 20 14:14:35 2020
+Terminated at Mon Jul 20 14:14:40 2020
+Results reported at Mon Jul 20 14:14:40 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -n 1
+#BSUB -gpu "num=1:mode=shared:j_exclusive=yes"
+#BSUB -R "rusage[mem=2]"
+#BSUB -q gpu32
+#BSUB -o /gpfs/scratch/bz957/skull_stripping/skynet_scripts/train_%J.log
+
+
+. /gpfs/share/skynet/apps/anaconda3/etc/profile.d/conda.sh
+conda activate /gpfs/scratch/bz957/brats_skynet
+###conda activate powerai1.6_env
+cd /gpfs/scratch/bz957/skull_stripping
+
+python -u train.py config19/train_ax.txt
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.32 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     2.00 GB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   5 sec.
+    Turnaround time :                            6 sec.
+
+The output (if any) is above this job summary.
+
