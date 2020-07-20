@@ -1,0 +1,189 @@
+data data_root /gpfs/scratch/bz957/skull_stripping /gpfs/scratch/bz957/skull_stripping
+data data_names config/train_names.txt config/train_names.txt
+data modality_postfix [T1w] ['T1w']
+data label_postfix brain brain
+data file_postfix nii.gz nii.gz
+data with_ground_truth True True
+data batch_size 5 5
+data data_shape [19, 144, 144, 1] [19, 144, 144, 1]
+data label_shape [11, 144, 144, 1] [11, 144, 144, 1]
+data label_convert_source [0, 1] [0, 1]
+data label_convert_target [0, 1] [0, 1]
+data batch_slice_direction axial axial
+data train_with_roi_patch False False
+data label_roi_mask  None
+data roi_patch_margin  None
+network net_type MSNet MSNet
+network net_name MSNet_ax MSNet_ax
+network downsample_twice True True
+network class_num 2 2
+training learning_rate 1e-3 0.001
+training decay 1e-7 1e-07
+training maximal_iteration 2000 2000
+training snapshot_iteration 500 500
+training start_iteration 0 0
+training test_iteration 10 10
+training test_step 2 2
+training model_pre_trained  None
+training model_save_prefix model/msnet_ax model/msnet_ax
+size of predicty: Tensor("MSNet_ax/final_pred/conv:0", shape=(5, 11, 144, 144, 2), dtype=float32)
+2020-07-20 14:52:15.670513: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 0 with properties: 
+name: Tesla V100-SXM2-32GB
+major: 7 minor: 0 memoryClockRate (GHz) 1.53
+pciBusID 0035:04:00.0
+Total memory: 31.72GiB
+Free memory: 31.41GiB
+2020-07-20 14:52:15.670601: I tensorflow/core/common_runtime/gpu/gpu_device.cc:961] DMA: 0 
+2020-07-20 14:52:15.670620: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   Y 
+2020-07-20 14:52:15.670640: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0035:04:00.0)
+Loading patient dataset/ds000102/sub-13 and modality T1w
+Loading patient dataset/ds000102/sub-14 and modality T1w
+Loading patient dataset/ds000102/sub-22 and modality T1w
+Loading patient dataset/ds000102/sub-25 and modality T1w
+Loading patient dataset/ds000102/sub-24 and modality T1w
+Loading patient dataset/ds000102/sub-23 and modality T1w
+Loading patient dataset/ds000102/sub-15 and modality T1w
+Loading patient dataset/ds000102/sub-12 and modality T1w
+Loading patient dataset/ds000102/sub-08 and modality T1w
+Loading patient dataset/ds000102/sub-01 and modality T1w
+Loading patient dataset/ds000102/sub-06 and modality T1w
+Loading patient dataset/ds000102/sub-07 and modality T1w
+Loading patient dataset/ds000102/sub-09 and modality T1w
+Loading patient dataset/ds000102/sub-17 and modality T1w
+Loading patient dataset/ds000102/sub-10 and modality T1w
+Loading patient dataset/ds000102/sub-26 and modality T1w
+Loading patient dataset/ds000102/sub-19 and modality T1w
+Loading patient dataset/ds000102/sub-21 and modality T1w
+Loading patient dataset/ds000102/sub-20 and modality T1w
+Loading patient dataset/ds000102/sub-18 and modality T1w
+Loading patient dataset/ds000102/sub-11 and modality T1w
+Loading patient dataset/ds000102/sub-16 and modality T1w
+Loading patient dataset/ds000102/sub-05 and modality T1w
+Loading patient dataset/ds000102/sub-02 and modality T1w
+Loading patient dataset/ds000102/sub-03 and modality T1w
+Loading patient dataset/ds000102/sub-04 and modality T1w
+Data load, 100.0% finished
+self.in_size is [(256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176)]
+14:56:33 07/20/20 EDT n 0 loss 0.34206253
+14:57:05 07/20/20 EDT n 10 loss 0.4688285
+14:57:36 07/20/20 EDT n 20 loss 0.13009661
+14:58:08 07/20/20 EDT n 30 loss 0.10353333
+14:58:39 07/20/20 EDT n 40 loss 0.13193163
+14:59:11 07/20/20 EDT n 50 loss 0.047863185
+14:59:41 07/20/20 EDT n 60 loss 0.09057817
+15:00:13 07/20/20 EDT n 70 loss 0.040867805
+15:00:43 07/20/20 EDT n 80 loss 0.25503865
+15:01:15 07/20/20 EDT n 90 loss 0.0295811
+15:01:46 07/20/20 EDT n 100 loss 0.06326944
+15:02:16 07/20/20 EDT n 110 loss 0.03051886
+15:02:47 07/20/20 EDT n 120 loss 0.0489946
+15:03:19 07/20/20 EDT n 130 loss 0.15349433
+15:03:51 07/20/20 EDT n 140 loss 0.055996776
+15:04:23 07/20/20 EDT n 150 loss 0.06873238
+15:04:53 07/20/20 EDT n 160 loss 0.050355196
+15:05:25 07/20/20 EDT n 170 loss 0.03633222
+15:05:56 07/20/20 EDT n 180 loss 0.03495896
+15:06:29 07/20/20 EDT n 190 loss 0.037406147
+15:06:59 07/20/20 EDT n 200 loss 0.034028113
+15:07:30 07/20/20 EDT n 210 loss 0.03165543
+15:08:01 07/20/20 EDT n 220 loss 0.03521979
+15:08:32 07/20/20 EDT n 230 loss 0.052634686
+15:09:03 07/20/20 EDT n 240 loss 0.017485261
+15:09:33 07/20/20 EDT n 250 loss 0.093700945
+15:10:05 07/20/20 EDT n 260 loss 0.023406386
+15:10:35 07/20/20 EDT n 270 loss 0.028193384
+15:11:06 07/20/20 EDT n 280 loss 0.014318556
+15:11:38 07/20/20 EDT n 290 loss 0.022163957
+15:12:09 07/20/20 EDT n 300 loss 0.043191552
+15:12:40 07/20/20 EDT n 310 loss 0.038214564
+15:13:10 07/20/20 EDT n 320 loss 0.08488953
+15:13:40 07/20/20 EDT n 330 loss 0.03267762
+15:14:12 07/20/20 EDT n 340 loss 0.026067019
+15:14:43 07/20/20 EDT n 350 loss 0.027940214
+15:15:14 07/20/20 EDT n 360 loss 0.02137199
+15:15:45 07/20/20 EDT n 370 loss 0.013723165
+15:16:15 07/20/20 EDT n 380 loss 0.08904597
+15:16:46 07/20/20 EDT n 390 loss 0.01932913
+15:17:17 07/20/20 EDT n 400 loss 0.034149796
+15:17:48 07/20/20 EDT n 410 loss 0.015501708
+15:18:19 07/20/20 EDT n 420 loss 0.016126305
+15:18:50 07/20/20 EDT n 430 loss 0.03901601
+15:19:20 07/20/20 EDT n 440 loss 0.01730907
+15:19:51 07/20/20 EDT n 450 loss 0.018522441
+15:20:22 07/20/20 EDT n 460 loss 0.062440157
+15:20:52 07/20/20 EDT n 470 loss 0.013999432
+15:21:24 07/20/20 EDT n 480 loss 0.022166312
+15:21:54 07/20/20 EDT n 490 loss 0.030074358
+15:22:26 07/20/20 EDT n 500 loss 0.018218398
+15:22:56 07/20/20 EDT n 510 loss 0.023314714
+15:23:28 07/20/20 EDT n 520 loss 0.02691874
+15:23:58 07/20/20 EDT n 530 loss 0.025386393
+15:24:33 07/20/20 EDT n 540 loss 0.016257554
+15:25:03 07/20/20 EDT n 550 loss 0.033807784
+15:25:35 07/20/20 EDT n 560 loss 0.030428946
+15:26:05 07/20/20 EDT n 570 loss 0.017989665
+15:26:35 07/20/20 EDT n 580 loss 0.021843374
+15:27:05 07/20/20 EDT n 590 loss 0.013197839
+15:27:37 07/20/20 EDT n 600 loss 0.28137082
+15:28:09 07/20/20 EDT n 610 loss 0.016499966
+15:28:40 07/20/20 EDT n 620 loss 0.031654
+15:29:11 07/20/20 EDT n 630 loss 0.012334287
+15:29:42 07/20/20 EDT n 640 loss 0.0077056885
+15:30:13 07/20/20 EDT n 650 loss 0.0438672
+15:30:45 07/20/20 EDT n 660 loss 0.013564557
+15:31:16 07/20/20 EDT n 670 loss 0.021814644
+15:31:47 07/20/20 EDT n 680 loss 0.021053553
+15:32:18 07/20/20 EDT n 690 loss 0.02304703
+15:32:49 07/20/20 EDT n 700 loss 0.015302926
+15:33:20 07/20/20 EDT n 710 loss 0.02523914
+15:33:51 07/20/20 EDT n 720 loss 0.0104676485
+15:34:22 07/20/20 EDT n 730 loss 0.036614776
+15:34:53 07/20/20 EDT n 740 loss 0.015057921
+15:35:23 07/20/20 EDT n 750 loss 0.010093719
+15:35:54 07/20/20 EDT n 760 loss 0.020378053
+15:36:26 07/20/20 EDT n 770 loss 0.017000318
+15:36:57 07/20/20 EDT n 780 loss 0.01009655
+15:37:28 07/20/20 EDT n 790 loss 0.010168314
+15:37:59 07/20/20 EDT n 800 loss 0.006549597
+15:38:31 07/20/20 EDT n 810 loss 0.014570981
+15:39:01 07/20/20 EDT n 820 loss 0.01836747
+15:39:32 07/20/20 EDT n 830 loss 0.021152854
+15:40:04 07/20/20 EDT n 840 loss 0.031356037
+15:40:35 07/20/20 EDT n 850 loss 0.22141925
+15:41:06 07/20/20 EDT n 860 loss 0.02637431
+15:41:37 07/20/20 EDT n 870 loss 0.036359876
+15:42:08 07/20/20 EDT n 880 loss 0.015037566
+15:42:40 07/20/20 EDT n 890 loss 0.0126105845
+15:43:11 07/20/20 EDT n 900 loss 0.01475209
+15:43:42 07/20/20 EDT n 910 loss 0.013372242
+15:44:13 07/20/20 EDT n 920 loss 0.0113143325
+15:44:45 07/20/20 EDT n 930 loss 0.010587871
+15:45:15 07/20/20 EDT n 940 loss 0.014480174
+15:45:47 07/20/20 EDT n 950 loss 0.0117767155
+15:46:18 07/20/20 EDT n 960 loss 0.011440158
+15:46:48 07/20/20 EDT n 970 loss 0.013854265
+15:47:20 07/20/20 EDT n 980 loss 0.017207563
+15:47:50 07/20/20 EDT n 990 loss 0.014625281
+15:48:22 07/20/20 EDT n 1000 loss 0.0115198195
+15:48:53 07/20/20 EDT n 1010 loss 0.018299937
+15:49:25 07/20/20 EDT n 1020 loss 0.011726618
+15:49:56 07/20/20 EDT n 1030 loss 0.08487433
+15:50:28 07/20/20 EDT n 1040 loss 0.026489854
+15:50:59 07/20/20 EDT n 1050 loss 0.009954393
+15:51:30 07/20/20 EDT n 1060 loss 0.011231542
+15:52:02 07/20/20 EDT n 1070 loss 0.007340789
+15:52:33 07/20/20 EDT n 1080 loss 0.0266307
+15:53:05 07/20/20 EDT n 1090 loss 0.017040044
+15:53:36 07/20/20 EDT n 1100 loss 0.027117312
+15:54:07 07/20/20 EDT n 1110 loss 0.016161561
+15:54:37 07/20/20 EDT n 1120 loss 0.0417594
+15:55:07 07/20/20 EDT n 1130 loss 0.033290803
+15:55:38 07/20/20 EDT n 1140 loss 0.01576981
+15:56:11 07/20/20 EDT n 1150 loss 0.0058912933
+15:56:42 07/20/20 EDT n 1160 loss 0.029763073
+15:57:12 07/20/20 EDT n 1170 loss 0.01577866
+15:57:42 07/20/20 EDT n 1180 loss 0.019897461
+15:58:13 07/20/20 EDT n 1190 loss 0.011260152
+15:58:45 07/20/20 EDT n 1200 loss 0.02251336
+15:59:17 07/20/20 EDT n 1210 loss 0.012398899
+15:59:48 07/20/20 EDT n 1220 loss 0.01983741

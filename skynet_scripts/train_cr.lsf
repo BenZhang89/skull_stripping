@@ -9,6 +9,6 @@
 . /gpfs/share/skynet/apps/anaconda3/etc/profile.d/conda.sh
 conda activate /gpfs/scratch/bz957/brats_skynet
 ###conda activate powerai1.6_env
-cd /gpfs/scratch/bz957/brats
+cd /gpfs/scratch/bz957/skull_stripping
 
-python -u train.py config19/train_wt_cr.txt
+python -u train.py config/train_cr.txt

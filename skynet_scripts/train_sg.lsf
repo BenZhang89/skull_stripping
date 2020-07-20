@@ -9,4 +9,4 @@
 conda activate /gpfs/scratch/bz957/brats_skynet
 cd /gpfs/scratch/bz957/skull_stripping
 
-python -u train.py config/train_wt_sg.txt
+python -u train.py config/train_sg.txt
