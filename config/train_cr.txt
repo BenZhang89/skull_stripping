@@ -1,0 +1,33 @@
+[data]
+data_root             = /gpfs/scratch/bz957/skull_stripping
+data_names            = config/train_names.txt
+modality_postfix      = [t1_mprage]
+label_postfix         = brain
+file_postfix          = nii.gz
+with_ground_truth     = True
+batch_size            = 5
+data_shape            = [19, 144, 144, 1]
+label_shape           = [11, 144, 144, 1]
+label_convert_source  = [0, 1]
+label_convert_target  = [0, 1]
+batch_slice_direction = coronal
+train_with_roi_patch  = False
+label_roi_mask        = 
+roi_patch_margin      = 
+
+[network]
+net_type            = MSNet
+net_name            = MSNet_cr
+downsample_twice    = True
+class_num           = 2
+
+[training]
+learning_rate      = 1e-3
+decay              = 1e-7
+maximal_iteration  = 2000
+snapshot_iteration = 500
+start_iteration    = 0
+test_iteration     = 10
+test_step          = 1
+model_pre_trained  = 
+model_save_prefix  = model/msnet_cr
