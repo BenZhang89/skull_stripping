@@ -242,3 +242,76 @@ self.in_size is [(256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 1
 16:27:18 07/20/20 EDT n 1750 loss 0.045271516
 16:27:50 07/20/20 EDT n 1760 loss 0.015645683
 16:28:21 07/20/20 EDT n 1770 loss 0.04818356
+16:28:53 07/20/20 EDT n 1780 loss 0.01600328
+16:29:23 07/20/20 EDT n 1790 loss 0.013441175
+16:29:54 07/20/20 EDT n 1800 loss 0.017059952
+16:30:26 07/20/20 EDT n 1810 loss 0.011116028
+16:30:59 07/20/20 EDT n 1820 loss 0.02588284
+16:31:30 07/20/20 EDT n 1830 loss 0.1954346
+16:32:01 07/20/20 EDT n 1840 loss 0.021078855
+16:32:32 07/20/20 EDT n 1850 loss 0.01502499
+16:33:03 07/20/20 EDT n 1860 loss 0.014661014
+16:33:34 07/20/20 EDT n 1870 loss 0.024389893
+16:34:05 07/20/20 EDT n 1880 loss 0.013194859
+16:34:36 07/20/20 EDT n 1890 loss 0.013461828
+16:35:07 07/20/20 EDT n 1900 loss 0.017825246
+16:35:39 07/20/20 EDT n 1910 loss 0.015738755
+16:36:08 07/20/20 EDT n 1920 loss 0.0073986948
+16:36:40 07/20/20 EDT n 1930 loss 0.012438655
+16:37:10 07/20/20 EDT n 1940 loss 0.01137656
+16:37:41 07/20/20 EDT n 1950 loss 0.02144438
+16:38:13 07/20/20 EDT n 1960 loss 0.017266631
+16:38:45 07/20/20 EDT n 1970 loss 0.0056337714
+16:39:17 07/20/20 EDT n 1980 loss 0.01008904
+16:39:49 07/20/20 EDT n 1990 loss 0.0075446367
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@skygpu20>
+Subject: Job 108124: <#!/bin/bash;#BSUB -n 1;#BSUB -gpu "num=1:mode=shared:j_exclusive=yes";#BSUB -R "rusage[mem=2]";#BSUB -q gpu32;#BSUB -o /gpfs/scratch/bz957/skull_stripping/skynet_scripts/train_%J.log;  . /gpfs/share/skynet/apps/anaconda3/etc/profile.d/conda.sh;conda activate /gpfs/scratch/bz957/brats_skynet;###conda activate powerai1.6_env;cd /gpfs/scratch/bz957/skull_stripping; python -u train.py config/train_ax.txt> in cluster <SkynetCluster> Done
+
+Job <#!/bin/bash;#BSUB -n 1;#BSUB -gpu "num=1:mode=shared:j_exclusive=yes";#BSUB -R "rusage[mem=2]";#BSUB -q gpu32;#BSUB -o /gpfs/scratch/bz957/skull_stripping/skynet_scripts/train_%J.log;  . /gpfs/share/skynet/apps/anaconda3/etc/profile.d/conda.sh;conda activate /gpfs/scratch/bz957/brats_skynet;###conda activate powerai1.6_env;cd /gpfs/scratch/bz957/skull_stripping; python -u train.py config/train_ax.txt> was submitted from host <skynet01> by user <bz957> in cluster <SkynetCluster> at Mon Jul 20 14:51:51 2020
+Job was executed on host(s) <skygpu20>, in queue <gpu32>, as user <bz957> in cluster <SkynetCluster> at Mon Jul 20 14:51:51 2020
+</home/bz957> was used as the home directory.
+</gpfs/scratch/bz957/skull_stripping/skynet_scripts> was used as the working directory.
+Started at Mon Jul 20 14:51:51 2020
+Terminated at Mon Jul 20 16:40:15 2020
+Results reported at Mon Jul 20 16:40:15 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -n 1
+#BSUB -gpu "num=1:mode=shared:j_exclusive=yes"
+#BSUB -R "rusage[mem=2]"
+#BSUB -q gpu32
+#BSUB -o /gpfs/scratch/bz957/skull_stripping/skynet_scripts/train_%J.log
+
+
+. /gpfs/share/skynet/apps/anaconda3/etc/profile.d/conda.sh
+conda activate /gpfs/scratch/bz957/brats_skynet
+###conda activate powerai1.6_env
+cd /gpfs/scratch/bz957/skull_stripping
+
+python -u train.py config/train_ax.txt
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   6289.22 sec.
+    Max Memory :                                 6 GB
+    Average Memory :                             5.92 GB
+    Total Requested Memory :                     2.00 GB
+    Delta Memory :                               -4.00 GB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                12
+    Run time :                                   6504 sec.
+    Turnaround time :                            6504 sec.
+
+The output (if any) is above this job summary.
+
