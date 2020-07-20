@@ -1,7 +1,7 @@
 [data]
 data_root             = /gpfs/scratch/bz957/skull_stripping
 data_names            = config/train_names.txt
-modality_postfix      = [t1_mprage]
+modality_postfix      = [T1w]
 label_postfix         = brain
 file_postfix          = nii.gz
 with_ground_truth     = True
@@ -28,6 +28,6 @@ maximal_iteration  = 2000
 snapshot_iteration = 500
 start_iteration    = 0
 test_iteration     = 10
-test_step          = 1
+test_step          = 2
 model_pre_trained  = 
 model_save_prefix  = model/msnet_cr
