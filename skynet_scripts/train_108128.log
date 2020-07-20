@@ -36,3 +36,34 @@ Free memory: 31.41GiB
 2020-07-20 15:59:20.832650: I tensorflow/core/common_runtime/gpu/gpu_device.cc:961] DMA: 0 
 2020-07-20 15:59:20.832677: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   Y 
 2020-07-20 15:59:20.832707: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0004:04:00.0)
+Loading patient dataset/ds000102/sub-13 and modality T1w
+Loading patient dataset/ds000102/sub-14 and modality T1w
+Loading patient dataset/ds000102/sub-22 and modality T1w
+Loading patient dataset/ds000102/sub-25 and modality T1w
+Loading patient dataset/ds000102/sub-24 and modality T1w
+Loading patient dataset/ds000102/sub-23 and modality T1w
+Loading patient dataset/ds000102/sub-15 and modality T1w
+Loading patient dataset/ds000102/sub-12 and modality T1w
+Loading patient dataset/ds000102/sub-08 and modality T1w
+Loading patient dataset/ds000102/sub-01 and modality T1w
+Loading patient dataset/ds000102/sub-06 and modality T1w
+Loading patient dataset/ds000102/sub-07 and modality T1w
+Loading patient dataset/ds000102/sub-09 and modality T1w
+Loading patient dataset/ds000102/sub-17 and modality T1w
+Loading patient dataset/ds000102/sub-10 and modality T1w
+Loading patient dataset/ds000102/sub-26 and modality T1w
+Loading patient dataset/ds000102/sub-19 and modality T1w
+Loading patient dataset/ds000102/sub-21 and modality T1w
+Loading patient dataset/ds000102/sub-20 and modality T1w
+Loading patient dataset/ds000102/sub-18 and modality T1w
+Loading patient dataset/ds000102/sub-11 and modality T1w
+Loading patient dataset/ds000102/sub-16 and modality T1w
+Loading patient dataset/ds000102/sub-05 and modality T1w
+Loading patient dataset/ds000102/sub-02 and modality T1w
+Loading patient dataset/ds000102/sub-03 and modality T1w
+Loading patient dataset/ds000102/sub-04 and modality T1w
+Data load, 100.0% finished
+self.in_size is [(256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176), (256, 256, 176)]
+16:04:13 07/20/20 EDT n 0 loss 0.31667727
+16:04:43 07/20/20 EDT n 10 loss 0.1529409
+16:05:14 07/20/20 EDT n 20 loss 0.15427202
