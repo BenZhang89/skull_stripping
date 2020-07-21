@@ -30,8 +30,4 @@ start_iteration    = 0
 test_iteration     = 10
 test_step          = 2
 model_pre_trained  = 
-<<<<<<< HEAD
 model_save_prefix  = model/msnet_sg
-=======
-model_save_prefix  = model/msnet_sg
->>>>>>> 2f74edef3a1a5f2cb2c44f135d4d7edbc5c5626e
