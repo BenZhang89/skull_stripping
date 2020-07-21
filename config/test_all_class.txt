@@ -30,7 +30,7 @@ downsample_twice    = True
 data_shape          = [19, 160, 160, 1]
 label_shape         = [11, 160, 160, 1]
 class_num           = 2
-model_file          = model/msnet_cr_2000.ckpt
+model_file          = model/msnet_cr_1500.ckpt
 
 [testing]
 test_slice_direction = all
