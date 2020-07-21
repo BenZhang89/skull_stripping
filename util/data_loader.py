@@ -66,10 +66,12 @@ class DataLoader():
             image_names = os.listdir(patient_dir)
             volume_name = None
             for image_name in image_names:
-
-                if(mod + '.' in image_name):
+                if not 'brain.' in image_name:
                     volume_name = image_name
                     break
+                # if(mod + '.' in image_name):
+                #     volume_name = image_name
+                #     break
         # for brats15
         else:
             img_file_dirs = os.listdir(patient_dir)
