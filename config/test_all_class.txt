@@ -12,7 +12,7 @@ downsample_twice    = True
 data_shape          = [19, 180, 160, 1]
 label_shape         = [11, 180, 160, 1]
 class_num           = 2
-model_file          = model/msnet_ax_1000.ckpt
+model_file          = model/msnet_ax_300.ckpt
 
 [network1sg]
 net_type            = MSNet
@@ -21,7 +21,7 @@ downsample_twice    = True
 data_shape          = [19, 160, 180, 1]
 label_shape         = [11, 160, 180, 1]
 class_num           = 2
-model_file          = model/msnet_sg_1000.ckpt
+model_file          = model/msnet_sg_300.ckpt
 
 [network1cr]
 net_type            = MSNet
@@ -30,7 +30,7 @@ downsample_twice    = True
 data_shape          = [19, 160, 160, 1]
 label_shape         = [11, 160, 160, 1]
 class_num           = 2
-model_file          = model/msnet_cr_1000.ckpt
+model_file          = model/msnet_cr_300.ckpt
 
 [testing]
 test_slice_direction = all
