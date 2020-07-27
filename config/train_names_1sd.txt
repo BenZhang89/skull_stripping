@@ -1,0 +1,11 @@
+dataset/ds000101/sub-03
+dataset/ds000101/sub-08
+dataset/ds000101/sub-02
+dataset/ds000101/sub-07
+dataset/ds000101/sub-13
+dataset/ds000101/sub-01
+dataset/ds000101/sub-06
+dataset/ds000101/sub-12
+dataset/ds000101/sub-17
+dataset/ds000101/sub-05
+dataset/ds000101/sub-11
