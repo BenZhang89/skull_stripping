@@ -32,7 +32,7 @@ class DataLoader():
         self.with_ground_truth    = config.get('with_ground_truth', False)
         self.label_convert_source = config.get('label_convert_source', None)
         self.label_convert_target = config.get('label_convert_target', None)
-        self.label_postfix = config.get('label_postfix', 'brain')
+        self.label_postfix = config.get('label_postfix', 'brain_mask')
         self.file_postfix  = config.get('file_postfix', 'nii.gz')
         self.data_names    = config.get('data_names', None)
         self.data_num      = config.get('data_num', None)
@@ -66,7 +66,7 @@ class DataLoader():
             image_names = os.listdir(patient_dir)
             volume_name = None
             for image_name in image_names:
-                if not 'brain.' in image_name and not '.DS_Store' in image_name:
+                if not 'brain_mask' in image_name and not '.DS_Store' in image_name:
                     volume_name = image_name
                     break
                 # if(mod + '.' in image_name):
@@ -132,8 +132,8 @@ class DataLoader():
             in_size.append(volume_size)  #
             if(self.with_ground_truth):
                 label, _ = self.__load_one_volume(self.patient_names[i], self.label_postfix)
-                #convert brain_tissue to 1, Ben
-                label[label>0] = 1
+                # #convert brain_tissue to 1, Ben
+                # label[label>0] = 1
                 label = crop_ND_volume_with_bounding_box(label, bbmin, bbmax)
                 if(self.data_resize):
                     label = resize_3D_volume_to_given_shape(label, self.data_resize, 0)
